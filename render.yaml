@@ -1,10 +1,10 @@
 services:
   - type: web
     name: pdf-image-injector
-    env: static
+    env: staticSite
     region: oregon
     plan: free
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --legacy-peer-deps && npm run build
     staticPublishPath: dist
     headers:
       - path: /*
